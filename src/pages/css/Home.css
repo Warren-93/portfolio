@@ -1,0 +1,65 @@
+/* Define color variables based on Callum template's cyan theme */
+:root {
+    --primary-color: #06b7db; /* Cyan blue */
+    --primary-light: #c3f4fd; /* Lighter cyan */
+    --primary-dark: #0e8aaa; /* Dark cyan */
+    --text-color: #053b48; /* Dark text */
+    --background-color: #f0fcff; /* Light background */
+    --button-hover-shadow: rgba(6, 183, 219, 0.3); /* Button hover shadow */
+}
+
+/* Home Page Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color); /* Use light background color */
+    color: var(--text-color); /* Text color */
+    margin: 0;
+    padding: 0;
+}
+
+.home-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--primary-color); /* Primary cyan color */
+    color: white;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+/* Buttons Section */
+.home-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.home-buttons .btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    background-color: var(--primary-dark); /* Dark cyan for buttons */
+    color: rgb(0, 0, 0);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.home-buttons .btn:hover {
+    transform: translateY(-5px);
+    background-color: var(--primary-light); /* Lighter cyan on hover */
+    box-shadow: 0px 4px 15px var(--button-hover-shadow);
+}
+
+.card-text {
+    max-height: 5rem; /* Adjust to desired height */
+    overflow: hidden;
+    display: -webkit-box;
+    display: flex; /* Fallback for older browsers */
+    -webkit-box-orient: vertical;
+    box-orient: vertical; /* Standard property */
+    -webkit-line-clamp: 3; /* Limits text to 3 lines */
+    line-clamp: 3; /* Standard property */
+    text-overflow: ellipsis;
+}

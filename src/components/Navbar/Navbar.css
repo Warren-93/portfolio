@@ -1,0 +1,106 @@
+:root {
+    --primary-color: #06b7db; /* Cyan */
+    --menu-text-color: rgb(255, 255, 255);
+    --menu-bg-color: rgba(0, 0, 0, 0.90); /* Dark background */
+    --link-hover-color: #06b7db; /* Dark cyan hover */
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background: var(--primary-color);
+    color: var(--text-color);
+    z-index: 100;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .hamburger {
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 101;
+  }
+  
+  /* Fullscreen Menu */
+  .fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--menu-bg-color);
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 99;
+    color:var(--menu-text-color);
+  }
+  
+  .fullscreen-menu.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--menu-text-color);
+  }
+  
+  .menu-links a {
+    font-size: 1.8rem;
+    color: var(--menu-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-links a.active {
+    color: var(--primary-color);
+  }
+  
+  .menu-links a:hover {
+    color: var(--link-hover-color);
+  }
+  
+  /* Social Links */
+  .social-links {
+    display: flex;
+    gap: 1rem; /* Space between icons */
+    margin-top: 2rem; /* Space from other elements */
+  }
+  
+  .social-links a {
+    display: inline-block;
+  }
+  
+  .social-icon {
+    width: 32px; /* Set icon size */
+    height: 32px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(170deg) brightness(100%) contrast(100%);
+  }
+  

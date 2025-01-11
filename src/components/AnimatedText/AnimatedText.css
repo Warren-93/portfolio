@@ -1,0 +1,23 @@
+.animated-text-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.animated-text {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid white;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}

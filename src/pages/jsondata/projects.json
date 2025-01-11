@@ -1,0 +1,45 @@
+[
+    {
+      "title": "Weather App",
+      "description": "Simple Weather App UI using WeatherAPI. Implements search functionality for city search.",
+      "image": "https://via.placeholder.com/150",
+      "link1": "Read More",
+      "link2": "View Github"
+    },
+    {
+      "title": "Movies API",
+      "description": "Frontend with Angular and Spring Boot backend connecting to MongoDB. Displays movies with playable trailers.",
+      "image": "https://via.placeholder.com/150",
+      "link1": "View Movies API",
+      "link2": "View Github Source Code"
+    },
+    {
+      "title": "In Your Shoes",
+      "description": "Mental health app designed around a support group format. Features include an emoji emotion tracker and journal.",
+      "image": "https://via.placeholder.com/150",
+      "link1": "Read More",
+      "link2": "View Github"
+    },
+    {
+      "title": "Project 1",
+      "description": "This project demonstrates a longer description with toggleable content using a ReadMore feature.",
+      "image": "https://via.placeholder.com/150",
+      "link1": "View Details",
+      "link2": "View Github"
+    },
+    {
+      "title": "Project 1",
+      "description": "This project demonstrates a longer description with toggleable content using a ReadMore feature.",
+      "image": "https://via.placeholder.com/150",
+      "link1": "View Details",
+      "link2": "View Github"
+    },
+    {
+      "title": "Project 1",
+      "description": "This project demonstrates a longer description with toggleable content using a ReadMore feature.",
+      "image": "https://via.placeholder.com/150",
+      "link1": "View Details",
+      "link2": "View Github"
+    }
+  ]
+  

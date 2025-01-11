@@ -1,0 +1,117 @@
+/* Define color variables for the Callum template's cyan theme */
+:root {
+    --primary-color: #06b7db; /* Cyan blue */
+    --primary-dark: #0e8aaa; /* Dark cyan */
+    --primary-light: #c3f4fd; /* Light cyan */
+    --accent-color: #09aacd; /* Accent cyan */
+    --text-color: #053b48; /* Dark text */
+    --background-color: #f0fcff; /* Light background */
+    --button-hover-shadow: rgba(6, 183, 219, 0.3); /* Hover shadow for buttons */
+  }
+  
+  /* General Page Styles */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color); /* Light background */
+    color: var(--text-color); /* Dark text */
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color); /* Primary cyan color */
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 1.5px;
+  }
+  
+  /* Portfolio Card Styles */
+  .portfolio-card {
+    background: #ffffff; /* White card background */
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  }
+  
+  .card-img {
+    height: 200px;
+    object-fit: cover; /* Ensure image fits nicely */
+    border-bottom: 4px solid var(--accent-color); /* Accent cyan border */
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color); /* Dark text */
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    color: #555; /* Neutral grey for readability */
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+  
+  /* Button Group */
+  .button-group .btn {
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 0.6rem;
+  }
+  
+  .button-group .btn-primary {
+    background-color: var(--primary-color); /* Primary cyan color */
+    border: none;
+    color: white;
+  }
+  
+  .button-group .btn-primary:hover {
+    background-color: var(--primary-dark); /* Darker cyan on hover */
+  }
+  
+  .button-group .btn-secondary {
+    background-color: var(--text-color); /* Dark text as secondary button */
+    border: none;
+    color: white;
+  }
+  
+  .button-group .btn-secondary:hover {
+    background-color: #5a6268; /* Slightly darker grey */
+  }
+  
+  .button-group .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem var(--button-hover-shadow); /* Cyan focus ring */
+  }
+  
+  /* Spacing and Layout */
+  .container {
+    padding: 2rem 1rem;
+  }
+  
+  .row {
+    justify-content: center;
+  }
+  
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 3rem;
+    }
+  
+    .portfolio-card {
+      margin: 0 auto;
+    }
+  }
+  

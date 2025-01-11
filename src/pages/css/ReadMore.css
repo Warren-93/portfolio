@@ -1,0 +1,10 @@
+.read-more-btn {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+}
