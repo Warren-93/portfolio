@@ -1,86 +1,54 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import 'tailwindcss';
+
+@theme {
+  --color-cyan-50: #f0fcff;
+  --color-cyan-100: #e6fafe;
+  --color-cyan-200: #d7f8fe;
+  --color-cyan-300: #c3f4fd;
+  --color-cyan-400: #a5eefd;
+  --color-cyan-500: #7ee7fc;
+  --color-cyan-600: #06b7db;
+  --color-cyan-700: #09aacd;
+  --color-cyan-800: #0e8aaa;
+  --color-cyan-900: #053b48;
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --cyan-50: #F0FCFF;
-  --cyan-100: #E6FAFE;
-  --cyan-200: #D7F8FE;
-  --cyan-300: #C3F4FD;
-  --cyan-400: #A5EEFD;
-  --cyan-500: #7EE7FC;
-  --cyan-600: #06B7DB;
-  --cyan-700: #09AACD;
-  --cyan-800: #0E8AAA;
-  --cyan-900: #053B48;
+  color-scheme: light dark;
 }
 
-/* General Page Styles */
 body {
-  font-family: 'Poppins', sans-serif; /* Matches Callum's font choice */
-  background-color: var(--cyan-50); /* Light cyan background */
-  color: var(--cyan-900); /* Dark cyan for text */
   margin: 0;
-  padding: 0;
+  font-family: var(--font-sans);
 }
 
-/* Navbar Styles */
-.navbar {
-  background-color: var(--cyan-600); /* Primary cyan color */
-  color: white;
-}
-
-/* Button Styles */
-.btn-primary {
-  background-color: var(--cyan-600);
-  border: none;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: var(--cyan-700);
-}
-
-/* Links */
-a {
-  color: var(--cyan-600);
-}
-
-a:hover {
-  color: var(--cyan-700);
-}
-
-/* Section Titles */
-.section-title {
-  color: var(--cyan-600);
-}
-
-/* Card Component */
-.card {
-  border: 1px solid var(--cyan-200);
-}
-
-.card-title {
-  color: var(--cyan-700);
-}
-
-.card-text {
-  color: var(--cyan-800);
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+@layer utilities {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
-}
 
-/* Responsive Cards */
-@media (max-width: 768px) {
-  .card {
-    margin-bottom: 1rem;
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  .animate-typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid currentColor;
+    animation:
+      typing 2s steps(28, end) forwards,
+      blink-caret 0.75s step-end infinite;
   }
 }
