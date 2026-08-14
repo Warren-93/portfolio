@@ -4,7 +4,8 @@ export const projects = [
     title: 'Weather App',
     description:
       'Simple Weather App UI using WeatherAPI. Implements search functionality for city search.',
-    image: 'https://placehold.co/150',
+    image: '/thumbnails/weather-app.webp',
+    imagePosition: 'top',
     links: [
       { label: 'View Live Demo', href: 'https://warren-93.github.io/weather-app-client/' },
       { label: 'View Github', href: 'https://github.com/Warren-93/weather-app-client' },
@@ -33,10 +34,21 @@ export const projects = [
     id: 'denny-warriors-fc',
     title: 'Denny Warriors Football Club',
     description: 'Website for Denny Warriors Football Club.',
-    image: 'https://placehold.co/150',
+    image: '/thumbnails/denny-warriors-fc.webp',
     links: [
       { label: 'View Live Site', href: 'https://denny-warriors-football-club.vercel.app/' },
       { label: 'View Github', href: 'https://github.com/Warren-93/DennyWarriorsFootballClub' },
+    ],
+  },
+  {
+    id: 'pitchmate',
+    title: 'Pitchmate',
+    description: 'Find, match, and play grassroots football friendlies together.',
+    image: '/thumbnails/pitchmate.webp',
+    comingSoon: true,
+    links: [
+      { label: 'View Live Site', href: 'https://grassroots-football-friendly-hub-we.vercel.app/welcome' },
+      { label: 'View Github', href: 'https://github.com/Warren-93/GrassrootsFootballFriendlyHubWeb' },
     ],
   },
 ];
