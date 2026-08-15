@@ -15,9 +15,10 @@ export const projects = [
     id: 'movies-api',
     title: 'Movies API',
     description:
-      'React frontend with a Spring Boot and MongoDB backend. Browse movies, watch trailers, and leave reviews.',
+      'React frontend with a Spring Boot backend, powered by the TMDB API. Browse movies by category, search titles, watch trailers, and leave reviews.',
     image: 'https://placehold.co/150',
     links: [
+      { label: 'View Live Demo', href: 'https://movies-two-hazel.vercel.app/' },
       { label: 'View Client Github', href: 'https://github.com/Warren-93/movies-client' },
       { label: 'View API Github', href: 'https://github.com/Warren-93/movies-api' },
     ],
