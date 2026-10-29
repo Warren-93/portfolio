@@ -6,7 +6,8 @@ const CallToAction = () => (
     <Section className="text-center">
       <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Get in touch</h2>
       <p className="mx-auto mt-4 max-w-xl text-gray-300">
-        Want to talk about a project, or about any of the work here? I'd be glad to hear from you.
+        I'm looking for a developer role and open to freelance projects. If you think I could
+        help, I'd be glad to hear from you.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <ButtonLink to="/contact" variant="amber">

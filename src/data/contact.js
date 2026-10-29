@@ -8,3 +8,6 @@ export const contact = {
   github: 'https://github.com/Warren-93',
   location: 'Falkirk, Scotland',
 };
+
+// Shown on the home page and contact page. Edit or empty this when it changes.
+export const availability = 'Looking for a developer role · Open to freelance projects';

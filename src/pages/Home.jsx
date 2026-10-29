@@ -1,5 +1,6 @@
 import { FiArrowRight, FiDownload } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import Availability from '../components/Availability';
 import CallToAction from '../components/CallToAction';
 import ProjectCard from '../components/ProjectCard';
 import { ButtonLink, Eyebrow, Section, SectionHeading } from '../components/ui';
@@ -11,6 +12,7 @@ const featured = projects.filter((project) => project.featured);
 const Home = () => (
   <>
     <Section className="pt-20 sm:pt-28">
+      <Availability className="mb-8" />
       <Eyebrow className="mb-6">Software developer · Falkirk</Eyebrow>
       <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
         Hi, I'm Mark. I build web apps and the APIs behind them.
