@@ -1,6 +1,15 @@
-# Portfolio
+# warren.digital
 
-Personal portfolio site — React + Vite, Tailwind CSS, deployed on Vercel.
+Mark Warren's developer portfolio, branded as <W/> warren.digital. React + Vite, Tailwind CSS, deployed on Vercel.
+
+## Where things live
+
+- `src/data/projects.js`: portfolio projects. `featured: true` puts a project on the home page.
+- `src/data/skills.js` and `src/data/contact.js`: skills list and contact details.
+- `src/index.css`: brand colours and fonts as Tailwind tokens (`ink`, `paper`, `amber-*`).
+- `src/components/Logo.jsx`: the <W/> mark and warren.digital wordmark.
+
+Email and phone in `contact.js` are `null` until filled in; the Contact page shows a "coming soon" placeholder until then.
 
 ## Tech stack
 
