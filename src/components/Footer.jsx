@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import Logo from './Logo';
-import { contact } from '../data/offer';
+import { contact } from '../data/contact';
 
 const Footer = () => (
   <footer className="border-t border-ink/10 dark:border-paper/10">
@@ -9,14 +9,12 @@ const Footer = () => (
       <div className="max-w-sm">
         <Logo />
         <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-          Fixed-price websites for grassroots football clubs and small businesses in Falkirk and
-          Forth Valley.
+          Software developer in Falkirk, building with Java, Spring Boot and React.
         </p>
       </div>
 
       <nav aria-label="Footer" className="flex gap-12 text-sm">
         <ul className="flex flex-col gap-2">
-          <li><Link to="/clubs" className="hover:underline">For clubs</Link></li>
           <li><Link to="/portfolio" className="hover:underline">Work</Link></li>
           <li><Link to="/about" className="hover:underline">About</Link></li>
           <li><Link to="/contact" className="hover:underline">Contact</Link></li>
@@ -33,7 +31,7 @@ const Footer = () => (
     </div>
     <div className="border-t border-ink/10 dark:border-paper/10">
       <p className="mx-auto max-w-6xl px-4 py-5 text-xs text-gray-500 sm:px-6 dark:text-gray-400">
-        © {new Date().getFullYear()} Mark Warren trading as Warren Digital · {contact.location}
+        © {new Date().getFullYear()} Mark Warren · {contact.location}
       </p>
     </div>
   </footer>

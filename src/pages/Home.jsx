@@ -1,73 +1,48 @@
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiDownload } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import CallToAction from '../components/CallToAction';
 import ProjectCard from '../components/ProjectCard';
 import { ButtonLink, Eyebrow, Section, SectionHeading } from '../components/ui';
 import { projects } from '../data/projects';
-import { foundingOffer, packages } from '../data/offer';
+import { skills } from '../data/skills';
 
 const featured = projects.filter((project) => project.featured);
-
-const audiences = [
-  {
-    title: 'Grassroots football clubs',
-    body: 'Fixtures, results, team pages and registrations in one place, easy enough for volunteers to keep up to date.',
-    to: '/clubs',
-    cta: 'See club packages',
-  },
-  {
-    title: 'Local small businesses',
-    body: 'A clear, fast website that tells people what you do and how to get in touch. Tell me what you need and I will give you a fixed price in writing.',
-    to: '/contact',
-    cta: 'Book a free chat',
-  },
-];
 
 const Home = () => (
   <>
     <Section className="pt-20 sm:pt-28">
-      <Eyebrow className="mb-6">Falkirk · Forth Valley</Eyebrow>
+      <Eyebrow className="mb-6">Software developer · Falkirk</Eyebrow>
       <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
-        Websites for grassroots clubs and small businesses.
+        Hi, I'm Mark. I build web apps and the APIs behind them.
       </h1>
       <p className="mt-6 max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-300">
-        I'm Mark, a software developer in Falkirk. I build websites at a fixed price, so you know
-        exactly what you're getting and what it costs before we start.
+        I work mostly with Java and Spring Boot on the back end and React on the front end. Lately
+        I've been building tools for grassroots football.
       </p>
       <div className="mt-10 flex flex-wrap gap-4">
-        <ButtonLink to="/contact">Book a free 30-minute chat</ButtonLink>
-        <ButtonLink to="/clubs" variant="secondary">
-          See club packages
+        <ButtonLink to="/portfolio">See my work</ButtonLink>
+        <ButtonLink href="/resume/Resume.pdf" variant="secondary">
+          <FiDownload aria-hidden="true" /> Download my CV
         </ButtonLink>
       </div>
-    </Section>
-
-    <Section className="pt-0 sm:pt-0">
-      <div className="grid gap-6 md:grid-cols-2">
-        {audiences.map((item) => (
-          <div
-            key={item.title}
-            className="flex flex-col rounded-xl border border-ink/10 p-6 sm:p-8 dark:border-paper/10"
+      <ul className="mt-12 flex flex-wrap gap-3" aria-label="Skills">
+        {skills.map((skill) => (
+          <li
+            key={skill}
+            className="rounded-md border border-ink/10 px-3 py-1.5 font-mono text-sm dark:border-paper/15"
           >
-            <h2 className="text-xl font-bold">{item.title}</h2>
-            <p className="mt-3 flex-1 text-gray-600 dark:text-gray-300">{item.body}</p>
-            <Link
-              to={item.to}
-              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-amber-dot hover:underline dark:text-amber-bright"
-            >
-              {item.cta} <FiArrowRight aria-hidden="true" />
-            </Link>
-          </div>
+            {skill}
+          </li>
         ))}
-      </div>
+      </ul>
     </Section>
 
     <div className="bg-white dark:bg-gray-800/30">
       <Section>
         <SectionHeading
-          eyebrow="Recent work"
+          eyebrow="Featured work"
           title="Built for grassroots football"
-          intro="Two projects I've built for the grassroots game, so you can see the kind of thing I make."
+          intro="Two projects I've built for the grassroots game, from the API up."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {featured.map((project) => (
@@ -82,30 +57,6 @@ const Home = () => (
         </Link>
       </Section>
     </div>
-
-    <Section>
-      <SectionHeading
-        eyebrow="Club packages"
-        title="Three clear packages. One fixed price."
-        intro="No hourly meter running. Pick the package that fits your club, and add extras only if you need them."
-      />
-      <div className="mt-10 grid gap-4 sm:grid-cols-3">
-        {packages.map((pkg) => (
-          <Link
-            key={pkg.id}
-            to={`/clubs#${pkg.id}`}
-            className="rounded-xl border border-ink/10 p-6 transition-colors hover:border-pitch dark:border-paper/10 dark:hover:border-paper/40"
-          >
-            <p className="font-club text-lg font-extrabold">{pkg.name}</p>
-            <p className="mt-2 font-club text-3xl font-extrabold">{pkg.price}</p>
-            <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">Ready in {pkg.readyIn}</p>
-          </Link>
-        ))}
-      </div>
-      <p className="mt-6 rounded-lg bg-pitch px-5 py-4 text-sm text-paper">
-        <strong>{foundingOffer.title}:</strong> {foundingOffer.body}
-      </p>
-    </Section>
 
     <CallToAction />
   </>

@@ -11,13 +11,8 @@
   --color-amber-bright: #f59e0b;
   --color-amber-dot: #b45309;
 
-  /* Club sub-brand. Only used on club-facing pages. */
-  --color-pitch: #166534;
-  --color-pitch-deep: #14532d;
-
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
-  --font-club: 'Archivo', ui-sans-serif, system-ui, sans-serif;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

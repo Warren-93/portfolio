@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // React Router keeps the scroll position between pages. Reset it on each new
-// page, but let links with a #hash (like /clubs#matchday) jump to their target.
+// page, but let links with a #hash (like /about#experience) jump to their target.
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 

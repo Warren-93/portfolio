@@ -1,7 +1,7 @@
 import { FiLinkedin, FiMail, FiPhone } from 'react-icons/fi';
-import { contact } from '../data/offer';
+import { contact } from '../data/contact';
 
-// Email and phone are placeholders until they're set in data/offer.js.
+// Email and phone are placeholders until they're set in data/contact.js.
 const Placeholder = ({ children }) => (
   <span className="rounded border border-dashed border-amber-deep px-2 py-0.5 font-mono text-xs text-amber-dot dark:border-amber-bright dark:text-amber-bright">
     {children}

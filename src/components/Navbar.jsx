@@ -6,7 +6,6 @@ import ThemeToggle from './ThemeToggle';
 import { ButtonLink } from './ui';
 
 const links = [
-  { to: '/clubs', label: 'For clubs' },
   { to: '/portfolio', label: 'Work' },
   { to: '/about', label: 'About' },
 ];
@@ -37,7 +36,7 @@ const Navbar = () => {
           ))}
           <ThemeToggle />
           <ButtonLink to="/contact" className="py-2">
-            Book a free chat
+            Get in touch
           </ButtonLink>
         </div>
 

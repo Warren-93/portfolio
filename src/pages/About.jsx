@@ -1,7 +1,8 @@
 import { FiDownload } from 'react-icons/fi';
 import CallToAction from '../components/CallToAction';
 import { ButtonLink, Section, SectionHeading } from '../components/ui';
-import { contact } from '../data/offer';
+import { contact } from '../data/contact';
+import { skills } from '../data/skills';
 
 const experience = [
   { title: 'Java Developer', place: 'Sky (through FDM)', dates: '2022 – 2023' },
@@ -12,8 +13,6 @@ const education = [
   { title: 'BSc Computing', place: 'University of Abertay Dundee', dates: '2018 – 2021' },
   { title: 'HND Software Development', place: 'Dundee & Angus College', dates: '2016 – 2018' },
 ];
-
-const skills = ['Java', 'Spring Boot', 'React + Vite', 'Docker', 'MongoDB', 'REST APIs', 'CI/CD with GitHub'];
 
 const Timeline = ({ heading, items }) => (
   <div>
@@ -37,14 +36,13 @@ const About = () => (
       <SectionHeading eyebrow="About" title="Hi, I'm Mark Warren" />
       <div className="mt-6 max-w-2xl space-y-4 text-lg text-gray-600 dark:text-gray-300">
         <p>
-          I'm a software developer based in {contact.location}. I trade as Warren Digital,
-          building websites and web apps for grassroots football clubs and small businesses in
-          Falkirk and Forth Valley.
+          I'm a software developer based in {contact.location}. I studied Computing at Abertay
+          and started my career as a Java developer, working on Sky's systems through FDM.
         </p>
         <p>
-          My background is in Java and Spring Boot, building the kind of systems that sit behind
-          big websites. I bring the same care to smaller sites: they should be quick, safe, easy to
-          update and built to last.
+          These days I build full-stack projects with Spring Boot, React and MongoDB, with a soft
+          spot for grassroots football. Most of what I make is open on GitHub, so you can see how
+          it's put together.
         </p>
       </div>
       <div className="mt-8 flex flex-wrap gap-4">
