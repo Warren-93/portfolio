@@ -2,8 +2,17 @@ import { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext(null);
 
+// localStorage can throw in private browsing or when storage is blocked.
+const readStoredTheme = () => {
+  try {
+    return localStorage.getItem('theme');
+  } catch {
+    return null;
+  }
+};
+
 const getInitialTheme = () => {
-  const stored = localStorage.getItem('theme');
+  const stored = readStoredTheme();
   if (stored === 'light' || stored === 'dark') return stored;
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 };
@@ -13,7 +22,11 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
-    localStorage.setItem('theme', theme);
+    try {
+      localStorage.setItem('theme', theme);
+    } catch {
+      // Theme still works for this visit; it just won't be remembered.
+    }
   }, [theme]);
 
   const toggleTheme = () => {

@@ -9,7 +9,7 @@ const ThemeToggle = () => {
       type="button"
       onClick={toggleTheme}
       aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
-      className="rounded-full p-2 text-cyan-800 transition-colors hover:bg-cyan-100 dark:text-cyan-300 dark:hover:bg-cyan-900/40"
+      className="rounded-full p-2 text-gray-600 transition-colors hover:bg-ink/5 hover:text-ink dark:text-gray-300 dark:hover:bg-paper/10 dark:hover:text-paper"
     >
       {theme === 'dark' ? <FiSun className="h-5 w-5" /> : <FiMoon className="h-5 w-5" />}
     </button>

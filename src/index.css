@@ -1,18 +1,18 @@
 @import 'tailwindcss';
 
+/* Brand tokens from the warren.digital brand sheet.
+   Amber: deep (#D97706) on light backgrounds, bright (#F59E0B) on dark only.
+   amber-dot (#B45309) is the dot in the wordmark on light, and the colour for
+   small amber text on light, where #D97706 is too faint to read comfortably. */
 @theme {
-  --color-cyan-50: #f0fcff;
-  --color-cyan-100: #e6fafe;
-  --color-cyan-200: #d7f8fe;
-  --color-cyan-300: #c3f4fd;
-  --color-cyan-400: #a5eefd;
-  --color-cyan-500: #7ee7fc;
-  --color-cyan-600: #06b7db;
-  --color-cyan-700: #09aacd;
-  --color-cyan-800: #0e8aaa;
-  --color-cyan-900: #053b48;
+  --color-ink: #111827;
+  --color-paper: #fafaf7;
+  --color-amber-deep: #d97706;
+  --color-amber-bright: #f59e0b;
+  --color-amber-dot: #b45309;
 
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -24,31 +24,21 @@
 body {
   margin: 0;
   font-family: var(--font-sans);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
 }
 
-@layer utilities {
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
+.dark body {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
 
-  @keyframes blink-caret {
-    50% {
-      border-color: transparent;
-    }
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  .animate-typewriter {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid currentColor;
-    animation:
-      typing 2s steps(28, end) forwards,
-      blink-caret 0.75s step-end infinite;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
