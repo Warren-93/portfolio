@@ -16,12 +16,12 @@ export const projects = [
     ],
   },
   {
-    id: 'pitchmate',
-    title: 'Pitchmate',
+    id: 'kickabout',
+    title: 'Kickabout',
     subtitle: 'Grassroots Football Friendly Hub',
     description:
       'Find, match and play grassroots football friendlies together. Built for the web and mobile.',
-    image: '/thumbnails/pitchmate.webp',
+    image: '/thumbnails/kickabout.webp',
     tags: ['Web', 'Mobile'],
     featured: true,
     status: 'In development',
