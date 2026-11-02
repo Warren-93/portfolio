@@ -9,6 +9,8 @@ const variants = {
     'border border-ink/20 text-ink hover:border-ink hover:bg-ink/5 dark:border-paper/30 dark:text-paper dark:hover:border-paper dark:hover:bg-paper/10',
   // For use on ink backgrounds only, where bright amber is on-brand.
   amber: 'bg-amber-bright text-ink hover:bg-amber-deep',
+  // Club sub-brand, for the football section only.
+  pitch: 'bg-pitch text-paper hover:bg-pitch-deep',
 };
 
 const base =
