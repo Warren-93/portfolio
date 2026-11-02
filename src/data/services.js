@@ -25,13 +25,13 @@ export const packages = [
   {
     id: 'kick-off',
     name: 'Kick Off',
-    readyIn: '2 weeks',
+    readyIn: '4 weeks',
     includes: ['Up to 5 pages', 'Works on phones', 'Your club colours', 'Contact form', 'Set up on Google'],
   },
   {
     id: 'matchday',
     name: 'Matchday',
-    readyIn: '3 weeks',
+    readyIn: '6 weeks',
     includes: [
       'Everything in Kick Off',
       'A page for each team',
@@ -43,7 +43,7 @@ export const packages = [
   {
     id: 'club-hub',
     name: 'Club Hub',
-    readyIn: '4–5 weeks',
+    readyIn: '8–10 weeks',
     includes: [
       'Everything in Matchday',
       'Online player registration',
