@@ -7,6 +7,7 @@ import { ButtonLink } from './ui';
 
 const links = [
   { to: '/portfolio', label: 'Work' },
+  { to: '/services', label: 'Services' },
   { to: '/about', label: 'About' },
 ];
 
